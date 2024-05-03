@@ -1,7 +1,8 @@
 <header class="header">
 
-    <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
-
+    <a href="<?php echo esc_url(home_url('/')); ?>"> <!-- Enlace al inicio -->
+        <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
+    </a>
     </div>
 
     <nav class="nav">

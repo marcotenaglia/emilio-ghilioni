@@ -13,7 +13,7 @@
 </head>
 
 <?php
-get_header();
+
 
 // Loop de la entrada individual
 if (have_posts()) {
@@ -25,71 +25,71 @@ if (have_posts()) {
             get_Header();
         ?>
 
-<div class="detalles-cuadro" id="post-<?php the_ID(); ?>">
+<div class="detalles-container" id="post-<?php the_ID(); ?>">
+
+    <div class="detalles-grid">
+
+        <div class="detalles-titulo">
+        · <?php echo get_field('cuadro_titulo'); ?> ·
+        </div>
 
 
-    <div class="detalles-titulo">
-        <?php echo get_field('cuadro_titulo'); ?>
-    </div>
-
-
-    <div class="imagen-completa-container">
-        <?php
+        <div class="imagen-completa-container">
+            <?php
                 $imagen_completa = get_field('imagen_completa');
                 if ($imagen_completa) {
-                    echo '<img src="' . esc_url($imagen_completa) . '" alt="Imagen Completa">';
+                    echo '<img class="imagen-completa" src="' . esc_url($imagen_completa) . '" alt="Imagen Completa">';
                 }
                 ?>
-    </div>
+        </div>
 
 
-    <div class="detalles-cuadro-recortes">
-        <div>
-            <?php
+        <div class="grid-recortes">
+            <div class="detalles-cuadro-recortes">
+                <?php
                 $recorte_1 = get_field('recorte_1');
                 if ($recorte_1) {
-                    echo '<img src="' . esc_url($recorte_1) . '" alt="Recorte 1">';
+                    echo '<img class="recorte-img" src="' . esc_url($recorte_1) . '" alt="Recorte 1">';
                 }
                 ?>
-        </div>
-        <div>
-            <?php
+            </div>
+            <div>
+                <?php
                 $recorte_2 = get_field('recorte_2');
                 if ($recorte_2) {
-                    echo '<img src="' . esc_url($recorte_2) . '" alt="Recorte 2">';
+                    echo '<img class="recorte-img" src="' . esc_url($recorte_2) . '" alt="Recorte 2">';
                 }
                 ?>
-        </div>
-        <div>
-            <?php
+            </div>
+            <div>
+                <?php
                 $recorte_3 = get_field('recorte_3');
                 if ($recorte_3) {
-                    echo '<img src="' . esc_url($recorte_3) . '" alt="Recorte 3">';
+                    echo '<img class="recorte-img" src="' . esc_url($recorte_3) . '" alt="Recorte 3">';
                 }
                 ?>
-        </div>
+            </div>
 
-        
+            <div class="detalles-descripcion">
+                <div class="fecha">
+                    <?php echo get_field('fecha'); ?>
+                </div>
+
+                <div class="medidas">
+                    <?php echo get_field('medidas'); ?>
+                </div>
+
+                <div class="tecnica">
+                    <?php echo get_field('tecnica'); ?>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="detalles-cuadro-descripcion">
-        <div class="fecha">
-            <?php echo get_field('fecha'); ?>
-        </div>
 
-        <div class="medidas">
-            <?php echo get_field('medidas'); ?>
-        </div>
-
-        <div class="tecnica">
-            <?php echo get_field('tecnica'); ?>
-        </div>
-    </div>
 </div>
-
 </div>
 
 
 <?php
     }
 }
-
