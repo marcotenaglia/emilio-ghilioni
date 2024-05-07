@@ -7,7 +7,7 @@
     <title>emilio ghilioni</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -30,21 +30,35 @@ if (have_posts()) {
     <div class="detalles-grid">
 
         <div class="detalles-titulo">
-        · <?php echo get_field('cuadro_titulo'); ?> ·
+            · <?php echo get_field('cuadro_titulo'); ?> ·
+        </div>
+
+        <div class="imagen-descripcion">
+            <div class="imagen-completa-container">
+                <?php
+                    $imagen_completa = get_field('imagen_completa');
+                    if ($imagen_completa) {
+                        echo '<img class="imagen-completa" src="' . esc_url($imagen_completa) . '" alt="Imagen Completa">';
+                    }
+                    ?>
+            </div>
+            <div class="descripcion">
+                    <div class="fecha">
+                        <?php echo get_field('fecha'); ?>
+                    </div>
+    
+                    <div class="medidas">
+                        <?php echo get_field('medidas'); ?>
+                    </div>
+    
+                    <div class="tecnica">
+                        <?php echo get_field('tecnica'); ?>
+                    </div>
+                </div>
         </div>
 
 
-        <div class="imagen-completa-container">
-            <?php
-                $imagen_completa = get_field('imagen_completa');
-                if ($imagen_completa) {
-                    echo '<img class="imagen-completa" src="' . esc_url($imagen_completa) . '" alt="Imagen Completa">';
-                }
-                ?>
-        </div>
-
-
-        <div class="grid-recortes">
+        <div class="recortes-grid">
             <div class="detalles-cuadro-recortes">
                 <?php
                 $recorte_1 = get_field('recorte_1');
@@ -70,19 +84,7 @@ if (have_posts()) {
                 ?>
             </div>
 
-            <div class="detalles-descripcion">
-                <div class="fecha">
-                    <?php echo get_field('fecha'); ?>
-                </div>
-
-                <div class="medidas">
-                    <?php echo get_field('medidas'); ?>
-                </div>
-
-                <div class="tecnica">
-                    <?php echo get_field('tecnica'); ?>
-                </div>
-            </div>
+            
         </div>
     </div>
 

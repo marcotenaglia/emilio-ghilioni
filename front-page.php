@@ -10,19 +10,18 @@
     <title>emilio ghilioni</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
 <body>
 
-        <?php
+    <?php
             get_Header();
         ?>
-    
-    
-    <div class="grid-container">
+
+
+    <div class="home-grid">
         <?php
         // Obtener todos los cuadros de WordPress
         $args = array(
@@ -40,14 +39,15 @@
                 $cuadro_titulo = get_field('cuadro_titulo');
                 $imagen_home = get_field('imagen_home');
         ?>
-                <a class="item" href="<?php the_permalink(); ?>">
-                    <div class="title-container">
-                        <div class="title"><?php echo esc_html($cuadro_titulo); ?></div>
-                    </div>
-                    <div class="images-container">
-                        <img class="images" src="<?php echo esc_url($imagen_home); ?>" alt="<?php echo esc_attr($cuadro_titulo); ?>">
-                    </div>
-                </a>
+        <a class="item" href="<?php the_permalink(); ?>">
+            <div class="title-container">
+                <div class="title"><?php echo esc_html($cuadro_titulo); ?></div>
+            </div>
+            <div class="images-container">
+                <img class="images" src="<?php echo esc_url($imagen_home); ?>"
+                    alt="<?php echo esc_attr($cuadro_titulo); ?>">
+            </div>
+        </a>
         <?php
             }
             wp_reset_postdata(); // Restablecer datos de consulta

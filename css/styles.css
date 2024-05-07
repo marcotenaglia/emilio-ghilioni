@@ -1,6 +1,8 @@
 
 body {
-    font-family: "Abel", sans-serif;
+    font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 a {
@@ -21,7 +23,7 @@ html {
     justify-content: space-between;
     padding-left: 80px;
     padding-right: 80px;
-    margin: 10px 0px;
+    margin: 10px 0px 0px 0px;
     margin-right: auto;
     margin-left: auto;
 
@@ -44,7 +46,7 @@ nav a {
 
 
 
-.grid-container {
+.home-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));
     justify-content: space-between;
@@ -52,7 +54,7 @@ nav a {
     width: auto;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     column-gap: 58px;
@@ -63,16 +65,19 @@ nav a {
     display: flex;
     flex-flow: column;
     justify-items: center;
-    align-items: start;
+    align-items: center;
     text-align: center;
     width: 100%;
     height: auto;
     text-decoration: none;
+    gap: 4px
 }
 
 
 .images-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .images {
@@ -90,12 +95,11 @@ nav a {
 }
 
 .title {
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: black;
     text-decoration: none;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.26s ease-in;
-
 }
 
 .item:hover .title {
@@ -120,53 +124,59 @@ nav a {
     justify-content: center;
     height: auto;
     align-items: start;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .detalles-grid {
     display: grid;
-    max-width:937px;
-    margin-left: 80px;
-    margin-right: 80px;
     align-content: center;
+    margin-bottom: 80px;
+    width: 45%;
+    min-width: 400px;
 }
 
-
 .detalles-titulo {
-    font-size: 2em;
-    font-weight: 200;
+    font-size: 3em;
+    font-weight: 300;
     margin-bottom: 10px;
 }
 
-.grid-recortes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.grid-recortes > * {
-    margin-right: 25px;
-    margin-top: 25px;
-    object-fit: cover;
+.imagen-descripcion {
+    display: flex;
+    align-items: end;
+    gap: 3%;
+    justify-content: start;
 }
 
 .imagen-completa-container {
     display: flex;
-    justify-content: center;
-    background-color: rgb(26, 26, 26);
-    max-width: 1000px;
-    height: 500px;
+    justify-content: start;
+    width: 77%;
 }
 
-.detalles-descripcion {
+.imagen-completa {
+    object-fit: contain;
+    width: 100%;
+}
+
+.descripcion {
     display: flex;
     flex-flow: column;
     font-size: 1.4em;
     justify-content: space-between;
-}
-.imagen-completa {
-    width: 100%;
-    object-fit: contain;
+    width: 20%;
 }
 
+.recortes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+}
+
+.recortes-grid > * {
+    margin-right: 18%;
+    margin-top: 18%;
+}
 
 .recorte-img {
     width: 100%;
@@ -185,7 +195,7 @@ nav a {
     }
     
 
-    .grid-container {
+    .home-grid {
         grid-template-columns: repeat(3, minmax(200px, 1fr));
     }
 
@@ -210,7 +220,7 @@ nav a {
 
     
 
-    .grid-container {
+    .home-grid {
         grid-template-columns: repeat(3, minmax(170px, 1fr));   
         padding-left: 20px;
         padding-right: 20px;
@@ -230,7 +240,7 @@ nav a {
 
 
 @media screen and (max-width: 670px) {
-    .grid-container {
+    .home-grid {
         grid-template-columns: repeat(1, minmax(100px, 1fr));
         padding-left: 60px;
         padding-right: 60px;
@@ -257,7 +267,7 @@ nav a {
 
     
 
-    .grid-container {
+    .home-grid {
         padding-left: 20px;
         padding-right: 20px;
     }
