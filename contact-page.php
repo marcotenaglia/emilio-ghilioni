@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Info
+Template Name: Contacto
 */
 ?>
 
@@ -26,16 +26,8 @@ Template Name: Info
             get_header();
         ?>
 
-<div class="info-container">
-    <div class="info">
-        <?php
-    // The WordPress Loop
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
-            the_content(); // Mostrar el contenido de la página
-        endwhile;
-    endif;
-    ?>
+<div class="contacto-container">
+    <div class="contacto">
+        Contactoso  
     </div>
 </div>

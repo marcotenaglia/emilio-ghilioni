@@ -7,9 +7,9 @@
     </div>
 
     <nav class="nav">
-        <a class="nav-anchortag"
-            href="<?php echo esc_url( get_permalink( get_page_by_title( 'Informacion' ) ) ); ?>">Información</a> <a href=""
-            class="nav-anchortag">Contacto</a>
+        <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
+        <a class="nav-anchortag" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Info' ) ) ); ?>">Información</a> 
+        <a class="nav-anchortag" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a> 
     </nav>
 
 </header>

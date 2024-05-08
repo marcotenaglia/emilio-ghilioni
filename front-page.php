@@ -17,7 +17,7 @@
 <body>
 
     <?php
-            get_Header();
+            get_header();
         ?>
 
 
