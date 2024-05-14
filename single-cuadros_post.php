@@ -29,8 +29,9 @@ if (have_posts()) {
 
     <div class="detalles-grid">
 
-        <div class="detalles-titulo">
-            · <?php echo get_field('cuadro_titulo'); ?> ·
+        <div class="detalles-title">
+         <?php echo get_field('cuadro_titulo'); ?>
+            
         </div>
 
         <div class="imagen-descripcion">

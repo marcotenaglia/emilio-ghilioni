@@ -68,3 +68,10 @@ function registrar_cuadros() {
     register_post_type( 'cuadros_post', $args );
 }
 add_action( 'init', 'registrar_cuadros' );
+
+
+function add_script() {
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/script-main.js', array(), '1.0', false);
+}
+
+add_action('wp_enqueue_scripts', 'add_script'); 

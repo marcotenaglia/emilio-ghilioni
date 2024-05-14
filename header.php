@@ -8,8 +8,17 @@
 
     <nav class="nav">
         <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
-        <a class="nav-anchortag" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Info' ) ) ); ?>">Información</a> 
-        <a class="nav-anchortag" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a> 
-    </nav>
-
+        <a class="nav-anchortag"
+            href="<?php echo esc_url( get_permalink( get_page_by_title( 'Info' ) ) ); ?>">Información</a>
+        <a class="nav-anchortag"
+            href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a>
+            
+        </nav>
+        <button class="hamburguer-menu" id="hamburguerMenu">
+            <svg class="hamburguer-close" xmlns="http://www.w3.org/2000/svg" id="Calque_1" data-name="Calque 1" viewBox="0 0 20 20"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.75px;}</style></defs><title>Plan de travail 1</title><line class="cls-1" x1="0.5" y1="1.5" x2="19.5" y2="18.5"/><line class="cls-1" x1="0.5" y1="18.5" x2="19.5" y2="1.5"/></svg>
+            <svg class="hamburguer-open" xmlns="http://www.w3.org/2000/svg" id="Calque_1" data-name="Calque 1" viewBox="0 0 20 20"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.75px;}</style></defs><title>Plan de travail 1</title><line class="cls-1" y1="1" x2="19.97" y2="1"/><line class="cls-1" y1="19" x2="19.97" y2="19"/><line class="cls-1" x1="0.03" y1="9.9" x2="20" y2="9.9"/></svg>            
+        </button>
+        
+    <div class="nav-list" id="navList"></div>
+    
 </header>
