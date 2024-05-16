@@ -165,7 +165,6 @@ nav a {
     display: grid;
     align-content: center;
     width: auto;
-    min-width: 400px;
 }
 
 .detalles-title {
@@ -186,7 +185,7 @@ nav a {
     display: flex;
     justify-content: start;
     width: auto;
-    height: 450;
+    height: 60vh;
 }
 
 .imagen-completa {
@@ -316,6 +315,14 @@ nav a {
         display: flex;
     }
 
+    .recorte-img {
+        max-width: 65px;
+    }
+
+    .descripcion {
+        font-size: 1.2em;
+    }
+
 }
 
 
@@ -345,17 +352,37 @@ nav a {
         opacity: 1;
     }
 
+    .imagen-completa-container {
+        height: 47vh;
+    }
+    
+    
 
+}
+
+
+@media screen and (max-width: 650px) {
+    .imagen-completa-container {
+        height: 35vh;
+    }
 }
 
 
 @media screen and (max-width: 480px) {
 
-    
-
-    .detalles-grid {
-        width: 90%;
-        min-width: 0px;
+    .detalles-container {
+        min-width: 30%;
     }
 
+    .imagen-completa-container {
+        height: 30vh;
+    }
+
+    .recorte-img {
+        max-width: 65px;
+    }
+
+    .descripcion {
+        font-size: 1.2em;
+    }
 }
