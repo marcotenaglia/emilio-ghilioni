@@ -85,6 +85,20 @@ if (have_posts()) {
                 ?>
             </div>
 
+            <div class="descripcion-chica">
+                    <div class="fecha">
+                        <?php echo get_field('fecha'); ?>
+                    </div>
+    
+                    <div class="medidas">
+                        <?php echo get_field('medidas'); ?>
+                    </div>
+    
+                    <div class="tecnica">
+                        <?php echo get_field('tecnica'); ?>
+                    </div>
+                </div>
+
             
         </div>
     </div>

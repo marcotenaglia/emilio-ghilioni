@@ -207,6 +207,22 @@ nav a {
     overflow: hidden;
 }
 
+
+.descripcion-chica {
+    display: none;
+    flex-flow: column;
+    font-size: 1.4em;
+    justify-content: space-between;
+    width: auto;
+}
+
+.descripcion-chica > div {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
 .recortes-grid {
     display: flex;
     max-width: 700px;
@@ -315,10 +331,6 @@ nav a {
         display: flex;
     }
 
-    .recorte-img {
-        max-width: 65px;
-    }
-
     .descripcion {
         font-size: 1.2em;
     }
@@ -351,38 +363,44 @@ nav a {
     .title {
         opacity: 1;
     }
-
-    .imagen-completa-container {
-        height: 47vh;
-    }
     
     
 
-}
 
-
-@media screen and (max-width: 650px) {
-    .imagen-completa-container {
-        height: 35vh;
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-
-    .detalles-container {
-        min-width: 30%;
-    }
-
-    .imagen-completa-container {
-        height: 30vh;
-    }
-
-    .recorte-img {
-        max-width: 65px;
-    }
 
     .descripcion {
+        display: none;
+    }
+
+    .descripcion-chica {
+        display: flex;
         font-size: 1.2em;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 560px) {
+
+    .imagen-completa-container {
+        height: 40vh;
+    }
+
+    .detalles-grid {
+        max-width: 500px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .imagen-completa-container {
+        height: auto;
+        width: 100%;
+    }
+
+    .imagen-completa{
+        height: auto;
+        width: 100%;
     }
 }
