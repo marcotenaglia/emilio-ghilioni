@@ -377,16 +377,6 @@ nav a {
         font-size: 1.2em;
     }
     
-
-}
-
-
-@media screen and (max-width: 560px) {
-
-    .imagen-completa-container {
-        height: 40vh;
-    }
-
     .detalles-grid {
         max-width: 500px;
         width: 80%;
@@ -403,4 +393,17 @@ nav a {
         height: auto;
         width: 100%;
     }
+
+}
+
+
+@media screen and (max-width: 560px) {
+
+    /*
+    .imagen-completa-container {
+        height: 40vh;
+    }
+    */
+
+    
 }
