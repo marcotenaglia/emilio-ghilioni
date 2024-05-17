@@ -39,7 +39,7 @@ if (have_posts()) {
                 <?php
                     $imagen_completa = get_field('imagen_completa');
                     if ($imagen_completa) {
-                        echo '<img class="imagen-completa" src="' . esc_url($imagen_completa) . '" alt="Imagen Completa">';
+                        echo '<img id="imagenCompleta" class="imagen-completa" src="' . esc_url($imagen_completa) . '" alt="Imagen Completa">';
                     }
                     ?>
             </div>
