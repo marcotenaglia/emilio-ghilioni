@@ -17,6 +17,7 @@ menu.addEventListener('click', function() {
             imagenCompleta.style.maxWidth = "673px";
             imagenCompletaContainer.style.height = "auto";
         }
+   
     }
 
     // Llama a la función de ajuste de tamaño cuando la ventana se redimensiona
