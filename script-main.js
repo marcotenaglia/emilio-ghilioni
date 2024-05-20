@@ -1,28 +1,37 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log("hola")
 
-let menu = document.getElementById('hamburguerMenu')
+    let menu = document.getElementById('hamburguerMenu')
+    let menuOpen = document.getElementById('menu-open')
+    let menuClose = document.getElementById('menu-close')
+    let navList = document.getElementById('nav-list')
 
-menu.addEventListener('click', function() {
-    menu.classList.add('menu-open')
-});
+    menu.addEventListener('click', function () {
+        menuOpen.classList.toggle('open');
+        menuClose.classList.toggle('open');
+        navList.classList.toggle('nav-list-open')
+    });
 
     let imagenCompleta = document.getElementById("imagenCompleta");
     let imagenCompletaContainer = document.querySelector(".imagen-completa-container");
 
-
     function ajustarTamanio() {
-        if (imagenCompleta.offsetWidth > 700) {
-            console.log("El ancho de la imagen es mayor que 700px");
-            imagenCompleta.style.maxWidth = "673px";
-            imagenCompletaContainer.style.height = "auto";
+        if (imagenCompleta) {
+            if (imagenCompleta.offsetWidth > 673) {
+                console.log("El ancho de la imagen es mayor que 673px");
+                imagenCompleta.style.maxWidth = "673px";
+                imagenCompletaContainer.style.height = "auto";
+            }
         }
-   
+
     }
+
 
     // Llama a la función de ajuste de tamaño cuando la ventana se redimensiona
     window.addEventListener('resize', ajustarTamanio);
 
     // Llama a la función de ajuste de tamaño cuando la página se carga inicialmente
     ajustarTamanio();
-};
+
+
+});
