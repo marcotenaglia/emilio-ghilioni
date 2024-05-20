@@ -264,33 +264,67 @@ nav a {
     max-width: 100px;
 }
 
-.info-container {
-    display: flex;
-    justify-content: center;
-}
 
 .info {
-    width: 70%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
 }
+
+
+.section-info {
+    overflow: hidden; /* Esto ayuda a que el contenedor contenga los elementos flotantes */
+    width: 100%;
+  }
+
+.imagen-info-1 {
+  float: left;
+  margin: 0px 30px 30px 0px; /* Espacio entre la imagen y el texto */
+  max-width: 300px;
+}
+
+.imagen-info-2 {
+    float: right;
+    margin: 0px 0px 30px 30px; /* Espacio entre la imagen y el texto */
+    max-width: 300px;
+}
+  
+
+.imagen-info img {
+    display: block;
+    width: 100%;
+  
+}
+
+.texto-info {
+    text-align: justify;
+}
+
 
 .contacto-container {
     display: flex;
+    flex-flow: row;
     justify-content: center;
-}
-
-.contacto {
-    width: 20%;
-    padding: 20px;
+    align-items: center;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
-    text-align: center;
-    height: 200px;
-    border: 1px solid rgb(75, 75, 75);
-    border-radius: 10px;
+}
+
+.contacto-texto {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.contacto-imagen {
+    width: 50%;
+}
+
+.contacto-imagen img {
+    width: 50%;
 }
 
 @media screen and (max-width: 1200px) {

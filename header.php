@@ -10,14 +10,14 @@
         <nav class="nav">
             <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Info' ) ) ); ?>">Información</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">Trayectoria</a>
             <a class="nav-anchortag"
                 href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a>
         </nav>
         <div class="nav-list-close" id="nav-list">
             <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Info' ) ) ); ?>">Información</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">Trayectoria</a>
             <a class="nav-anchortag"
                 href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a>
         </div>
