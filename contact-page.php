@@ -31,8 +31,8 @@ Template Name: Contacto
         <div class="contacto-texto">
             <div class="contacto-titulo">Emilio Ghilioni</div>
             <div class="contacto-mail-label">Para más información:</div>
-            <div class="contacto-mail"><i> ghilioni.obras@gmail.com <i></div>
+            <a class="contacto-mail" href="mailto:email@example.com"><i> ghilioni.obras@gmail.com <i></a>
             <div class="contacto-ciudad">Rosario, Argentina</div>
-            <a class="contacto-instagram" src="www.instagram.com"><i>Instagram<i></a>
+            <i><a class="contacto-instagram" href="https://www.instagram.com/emilioghilioni">Instagram</a><i>
         </div>
 </div>
