@@ -69,6 +69,15 @@ function registrar_cuadros() {
 }
 add_action( 'init', 'registrar_cuadros' );
 
+function registrar_publicaciones() {
+    $args = array(
+        'public' => true,
+        'label'  => 'Publicaciones',
+        'supports' => array( 'title', 'thumbnail' ), // Habilita soporte para título y miniatura (imagen destacada)
+    );
+    register_post_type( 'publicaciones', $args );
+}
+add_action( 'init', 'registrar_publicaciones' );
 
 function add_script() {
     wp_enqueue_script('scripts', get_template_directory_uri() . '/script-main.js', array(), '1.0', false);
