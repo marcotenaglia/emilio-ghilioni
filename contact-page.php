@@ -30,8 +30,9 @@ Template Name: Contacto
         <div class="contacto-imagen"><img src="<?php echo get_template_directory_uri(); ?>/images/imagen-contacto.png" alt="Logo"></div>
         <div class="contacto-texto">
             <div class="contacto-titulo">Emilio Ghilioni</div>
-            <div class="contacto-mail">Para más información: ghilioni.obras@gmail.com</div>
+            <div class="contacto-mail-label">Para más información:</div>
+            <div class="contacto-mail"><i> ghilioni.obras@gmail.com <i></div>
             <div class="contacto-ciudad">Rosario, Argentina</div>
-            <a class="contacto-instagram" src="www.instagram.com">Instagram</a>
+            <a class="contacto-instagram" src="www.instagram.com"><i>Instagram<i></a>
         </div>
 </div>
