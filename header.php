@@ -8,18 +8,22 @@
     <div>
 
         <nav class="nav">
-            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">inicio</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">Trayectoria</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">trayectoria</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Publicaciones' ) ) ); ?>">publicaciones</a>
+            <a class="nav-anchortag"
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">contacto</a>
         </nav>
         <div class="nav-list-close" id="nav-list">
-            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">inicio</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">Trayectoria</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">trayectoria</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Publicaciones' ) ) ); ?>">publicaciones</a>
+            <a class="nav-anchortag"
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">contacto</a>
         </div>
         <button class="hamburguer-menu" id="hamburguerMenu">
             <svg class="open" id="menu-open" xmlns="http://www.w3.org/2000/svg" id="Calque_1" data-name="Calque 1"

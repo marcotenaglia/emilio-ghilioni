@@ -73,7 +73,8 @@ function registrar_publicaciones() {
     $args = array(
         'public' => true,
         'label'  => 'Publicaciones',
-        'supports' => array( 'title', 'thumbnail' ), // Habilita soporte para título y miniatura (imagen destacada)
+        'supports' => array( 'title', 'thumbnail' ), // Soporte para título y miniatura (imagen destacada)
+        'publicly_queryable' => false, // Evita que se creen páginas individuales
     );
     register_post_type( 'publicaciones', $args );
 }

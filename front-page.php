@@ -53,84 +53,10 @@
             wp_reset_postdata(); // Restablecer datos de consulta
         } else {
             // Si no hay cuadros, aquí puedes mostrar un mensaje o realizar alguna acción
-            echo 'No hay cuadros disponibles.';
+            echo 'No hay obras disponibles.';
         }
         ?>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <?php /* 
-
-<div class="grid-container">
-    <?php
-    // Obtener todos los cuadros de WordPress
-    $args = array(
-        'post_type'      => 'cuadros_post',
-        'posts_per_page' => -1,
-    );
-    $query = new WP_Query($args);
-
-    // Dividir los resultados en columnas
-    $total_posts = $query->post_count;
-    $posts_per_column = ceil($total_posts / 4);
-    $remaining_posts = $total_posts % 4;
-    $remaining_counter = 0;
-
-    // Inicializar el contador
-    $counter = 0;
-
-    // Loop a través de los cuadros y generar las columnas
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-
-            // Incrementar el contador
-            $counter++;
-
-            // Mostrar el cuadro en la columna correspondiente
-            if ($counter % $posts_per_column === 1) {
-                echo '<div class="columna">';
-            }
-            ?>
-    <a class="item" href="">
-        <div class="images-container">
-            <?php
-                    // Obtener la URL de la imagen destacada
-                    $image_url = get_field('cuadro_imagen');
-                    ?>
-            <img class="images" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
-        </div>
-        <div class="title-container">
-            <div class="title"><?php the_field('cuadro_titulo'); ?></div>
-        </div>
-    </a>
-    <?php
-            // Cerrar la columna si se alcanza el límite o es el último cuadro
-            if ($counter % $posts_per_column === 0 || $counter === $total_posts) {
-                echo '</div>'; // Cerrar la columna
-            }
-        }
-    }
-    wp_reset_postdata(); // Restablecer datos de consulta
-    ?>
-    </div>
-    */?>
-
-
-
 
 
     </section>
