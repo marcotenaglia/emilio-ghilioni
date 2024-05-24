@@ -380,7 +380,7 @@ nav a {
 }
 
 .publicacion-images-container {
-    width: 250px;
+    min-width: 250px;
 }
 
 .publicacion-images {
@@ -391,13 +391,16 @@ nav a {
     max-width: 350px;
     width: 50%;
     font-size: 1em;
-    text-align: justify;
+    text-align: start;
     overflow-wrap: break-word; 
 }
 
 .titulo-publicacion {
-    margin-bottom: 10px;
     font-size: 1.3em;
+}
+
+.descripcion-publicacion {
+    margin-top: 0.5em;
 }
 
 @media screen and (max-width: 1200px) {
@@ -637,11 +640,14 @@ nav a {
         margin: 20px;
     }
 
-
+    .publicaciones-grid {
+        row-gap: 3.5em;
+    }
 
     .publicacion {
         flex-flow: column;
         align-items: center;
+        gap: 1em;
     }
 
     .publicacion-images-container {
@@ -650,10 +656,14 @@ nav a {
 
     .texto-publicacion {
         width: 90%;
+        max-width: none;
     }
 
     .titulo-publicacion {
-        text-align: center;
-        
+        text-align: center;   
+    }
+
+    .descripcion-publicacion {
+        text-align: justify;
     }
 }

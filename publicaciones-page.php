@@ -50,12 +50,8 @@ Template Name: Publicaciones
                             alt="<?php echo esc_attr($titulo); ?>">
                     </div>
                     <div class="texto-publicacion">
-                        <div class="titulo-publicacion-container">
                             <div class="titulo-publicacion"><?php echo esc_html($titulo); ?></div>
-                        </div>
-                        <div class="descripcion-publicacion-container">
                             <div class="descripcion-publicacion"><?php echo esc_html($descripcion); ?></div>
-                        </div>
                     </div>
                 </div>
     <?php
