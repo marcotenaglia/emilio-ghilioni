@@ -7,7 +7,8 @@
     <title>emilio ghilioni</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -30,8 +31,8 @@ if (have_posts()) {
     <div class="detalles-grid">
 
         <div class="detalles-title">
-         <?php echo get_field('cuadro_titulo'); ?>
-            
+            <?php echo get_field('cuadro_titulo'); ?>
+
         </div>
 
         <div class="imagen-descripcion">
@@ -44,18 +45,18 @@ if (have_posts()) {
                     ?>
             </div>
             <div class="descripcion">
-                    <div class="fecha">
-                        <?php echo get_field('fecha'); ?>
-                    </div>
-    
-                    <div class="medidas">
-                        <?php echo get_field('medidas'); ?>
-                    </div>
-    
-                    <div class="tecnica">
-                        <?php echo get_field('tecnica'); ?>
-                    </div>
+                <div class="fecha">
+                    <?php echo get_field('fecha'); ?>
                 </div>
+
+                <div class="medidas">
+                    <?php echo get_field('medidas'); ?>
+                </div>
+
+                <div class="tecnica">
+                    <?php echo get_field('tecnica'); ?>
+                </div>
+            </div>
         </div>
 
 
@@ -86,18 +87,33 @@ if (have_posts()) {
             </div>
 
             <div class="descripcion-chica">
-                    <div class="fecha">
-                        <?php echo get_field('fecha'); ?>
-                    </div>
-    
-                    <div class="medidas">
-                        <?php echo get_field('medidas'); ?>
-                    </div>
-    
-                    <div class="tecnica">
-                        <?php echo get_field('tecnica'); ?>
-                    </div>
+                <div class="fecha">
+                    <?php echo get_field('fecha'); ?>
                 </div>
+
+                <div class="medidas">
+                    <?php echo get_field('medidas'); ?>
+                </div>
+
+                <div class="tecnica">
+                    <?php echo get_field('tecnica'); ?>
+                </div>
+            </div>
+
+
+            <!-- Swiper HTML Structure -->
+            <div id="swiperContainer" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="<?php echo esc_url($imagen_completa); ?>" alt="Imagen Completa">
+                    </div>
+                    <div class="swiper-slide"><img src="<?php echo esc_url($recorte_1); ?>" alt="Recorte 1"></div>
+                    <div class="swiper-slide"><img src="<?php echo esc_url($recorte_2); ?>" alt="Recorte 2"></div>
+                    <div class="swiper-slide"><img src="<?php echo esc_url($recorte_3); ?>" alt="Recorte 3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
 
             
         </div>

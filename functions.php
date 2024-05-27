@@ -80,8 +80,23 @@ function registrar_publicaciones() {
 }
 add_action( 'init', 'registrar_publicaciones' );
 
+/*
+
 function add_script() {
     wp_enqueue_script('scripts', get_template_directory_uri() . '/script-main.js', array(), '1.0', false);
 }
 
 add_action('wp_enqueue_scripts', 'add_script'); 
+*/
+
+function enqueue_swiper_assets() {
+    // Encolar el CSS de Swiper
+    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
+
+    // Encolar el JS de Swiper
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, false);
+
+    // Encolar tu archivo JS principal
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/script-main.js', array(), '1.0', false);
+}
+add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');

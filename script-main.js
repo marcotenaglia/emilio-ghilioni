@@ -33,5 +33,26 @@ document.addEventListener('DOMContentLoaded', function () {
     // Llama a la función de ajuste de tamaño cuando la página se carga inicialmente
     ajustarTamanio();
 
+    //swiper
+
+    const images = document.querySelectorAll('.imagen-completa, .recorte-img');
+    const allImages = Array.from(images).map(image => image.src);
+    
+    images.forEach(image => {
+        image.addEventListener('click', function () {
+            const index = allImages.indexOf(this.src);
+            const swiper = new Swiper('.swiper-container', {
+                initialSlide: index,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            const swiperContainer = document.getElementById('swiperContainer');
+            swiperContainer.classList.add('swiper-open');
+        });
+});
 
 });
+
