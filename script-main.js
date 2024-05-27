@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const images = document.querySelectorAll('.imagen-completa, .recorte-img');
     const allImages = Array.from(images).map(image => image.src);
-    
+
     images.forEach(image => {
         image.addEventListener('click', function () {
             const index = allImages.indexOf(this.src);
@@ -52,7 +52,19 @@ document.addEventListener('DOMContentLoaded', function () {
             const swiperContainer = document.getElementById('swiperContainer');
             swiperContainer.classList.add('swiper-open');
         });
-});
+
+        const closeButton = document.getElementById('closeButton');
+
+        // Agrega un evento de clic al botón de cierre
+        closeButton.addEventListener('click', function () {
+            // Busca el contenedor del Swiper
+            const swiperContainer = document.getElementById('swiperContainer');
+
+            // Remueve la clase que muestra el Swiper
+            swiperContainer.classList.remove('swiper-open');
+        });
+
+    });
 
 });
 

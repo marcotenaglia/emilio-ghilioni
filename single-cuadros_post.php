@@ -101,6 +101,11 @@ if (have_posts()) {
             </div>
 
 
+
+</div>
+</div>
+
+
             <!-- Swiper HTML Structure -->
             <div id="swiperContainer" class="swiper-container">
                 <div class="swiper-wrapper">
@@ -110,6 +115,7 @@ if (have_posts()) {
                     <div class="swiper-slide"><img src="<?php echo esc_url($recorte_2); ?>" alt="Recorte 2"></div>
                     <div class="swiper-slide"><img src="<?php echo esc_url($recorte_3); ?>" alt="Recorte 3"></div>
                 </div>
+                <button id="closeButton" class="swiper-x">X</button>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -118,10 +124,6 @@ if (have_posts()) {
             
         </div>
     </div>
-
-</div>
-</div>
-
 
 <?php
     }

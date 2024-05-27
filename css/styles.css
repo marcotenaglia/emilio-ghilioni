@@ -412,22 +412,26 @@ nav a {
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.9);
     display: none; /* Ocultar inicialmente */
+    justify-content: center;
 }
 
 /* Estilos para los slides */
 .swiper-slide {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
 }
 
 /* Estilos para las imágenes dentro del Swiper */
 .swiper-image {
+    width: 100%;
+}
+
+.swiper-image-container {
     max-width: 80%; /* Ajusta el tamaño de las imágenes */
     max-height: 80%;
-    object-fit: contain; /* Ajusta el contenido de la imagen */
 }
 
 /* Estilos para los botones de navegación del Swiper */
@@ -461,6 +465,17 @@ nav a {
 .swiper-open {
     display: flex;
 }
+
+.swiper-x {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: antiquewhite;
+    background-color: transparent;
+    z-index: 1000;
+  }
 
 @media screen and (max-width: 1200px) {
     .item:nth-child(odd) {
