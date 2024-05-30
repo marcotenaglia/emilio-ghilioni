@@ -2,7 +2,7 @@
 
     <a href="<?php echo esc_url(home_url('/')); ?>">
         <!-- Enlace al inicio -->
-        <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
+        <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo1.png" alt="Logo">
     </a>
     </div>
     <div>

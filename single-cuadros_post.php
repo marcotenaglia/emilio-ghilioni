@@ -61,7 +61,7 @@ if (have_posts()) {
 
 
         <div class="recortes-grid">
-            <div class="detalles-cuadro-recortes">
+            <div class="recortes-container">
                 <?php
                 $recorte_1 = get_field('recorte_1');
                 if ($recorte_1) {
@@ -69,7 +69,7 @@ if (have_posts()) {
                 }
                 ?>
             </div>
-            <div>
+            <div class="recortes-container">
                 <?php
                 $recorte_2 = get_field('recorte_2');
                 if ($recorte_2) {
@@ -77,7 +77,7 @@ if (have_posts()) {
                 }
                 ?>
             </div>
-            <div>
+            <div class="recortes-container">
                 <?php
                 $recorte_3 = get_field('recorte_3');
                 if ($recorte_3) {
@@ -109,11 +109,11 @@ if (have_posts()) {
             <!-- Swiper HTML Structure -->
             <div id="swiperContainer" class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="<?php echo esc_url($imagen_completa); ?>" alt="Imagen Completa">
+                    <div class="swiper-slide"><img id="swiperImagen" class="swiper-img" src="<?php echo esc_url($imagen_completa); ?>" alt="Imagen Completa">
                     </div>
-                    <div class="swiper-slide"><img src="<?php echo esc_url($recorte_1); ?>" alt="Recorte 1"></div>
-                    <div class="swiper-slide"><img src="<?php echo esc_url($recorte_2); ?>" alt="Recorte 2"></div>
-                    <div class="swiper-slide"><img src="<?php echo esc_url($recorte_3); ?>" alt="Recorte 3"></div>
+                    <div class="swiper-slide"><img id="swiperImagen" class="swiper-img" src="<?php echo esc_url($recorte_1); ?>" alt="Recorte 1"></div>
+                    <div class="swiper-slide"><img id="swiperImagen" class="swiper-img" src="<?php echo esc_url($recorte_2); ?>" alt="Recorte 2"></div>
+                    <div class="swiper-slide"><img id="swiperImagen" class="swiper-img" src="<?php echo esc_url($recorte_3); ?>" alt="Recorte 3"></div>
                 </div>
                 <button id="closeButton" class="swiper-x">X</button>
                 <div class="swiper-button-next"></div>

@@ -215,6 +215,7 @@ nav a {
     object-fit: contain;
     width: auto;
     height: 100%;
+    cursor: pointer;
 }
 
 .descripcion {
@@ -260,6 +261,8 @@ nav a {
 .recorte-img {
     width: 100%;
     max-width: 100px;
+    cursor: pointer;
+    
 }
 
 
@@ -410,7 +413,7 @@ nav a {
     top: 0;
     left: 0;
     z-index: 9999;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(74 75 71 / 90%);;
     display: none; /* Ocultar inicialmente */
     justify-content: center;
 }
@@ -424,10 +427,12 @@ nav a {
     align-items: center;
 }
 
-/* Estilos para las imágenes dentro del Swiper */
-.swiper-image {
-    width: 100%;
+.swiper-img {
+    max-width: 90%;
+    height: auto;
+    max-height: 80vh;
 }
+
 
 .swiper-image-container {
     max-width: 80%; /* Ajusta el tamaño de las imágenes */
@@ -442,9 +447,9 @@ nav a {
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    color: black;
+    color: rgb(231, 231, 231) !important;
+    background-color: transparent !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -468,14 +473,25 @@ nav a {
 
 .swiper-x {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
+    top: 35px;
+    right: 35px;
+    font-size: 27px;
     cursor: pointer;
-    color: antiquewhite;
+    color: rgb(231, 231, 231);
     background-color: transparent;
     z-index: 1000;
   }
+
+  .swiper-ancho {
+    width: 75%;
+    height: auto;
+  }
+
+  .buscador-container {
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+
 
 @media screen and (max-width: 1200px) {
     .item:nth-child(odd) {
@@ -523,7 +539,10 @@ nav a {
     .publicacion {
         justify-content: center;
     }   
+
 }
+
+
 
 @media screen and (max-width: 900px) {
 
@@ -570,8 +589,10 @@ nav a {
         width: 80%;
     }
 
+    
 
 }
+
 
 
 
@@ -665,6 +686,7 @@ nav a {
         width: 90%;
     }
 
+
 }
 
 
@@ -740,4 +762,6 @@ nav a {
     .descripcion-publicacion {
         text-align: justify;
     }
+
+  
 }
