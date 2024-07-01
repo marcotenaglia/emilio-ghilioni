@@ -35,12 +35,25 @@ Template Name: Info
         <div class="texto-info">Nacido el 3 de mayo de 1935, en Colón de Santa Fe, fue un pintor radicado en la
             ciudad de
             Rosario. Su trayectoria empieza en los años 50, y abarca momentos clave para la instauración de
-            transformaciones radicales en el campo del arte rosarino. 
+            transformaciones radicales en el campo del arte rosarino.<br>
 
             Luego de sus primeras incursiones en la plástica durante su adolescencia, inició un período de formación
             en el taller de Juan Grela.
+            Nacido el 3 de mayo de 1935, en Colón de Santa Fe, fue un pintor radicado en la
+            ciudad de
+            Rosario. Su trayectoria empieza en los años 50, y abarca momentos clave para la instauración de
+            transformaciones radicales en el campo del arte rosarino.<br>
+            Luego de sus primeras incursiones en la plástica durante su adolescencia, inició un período de formación
+            en el taller de Juan Grela.
+            Nacido el 3 de mayo de 1935, en Colón de Santa Fe, fue un pintor radicado en la
+            ciudad de
+            Rosario. Su trayectoria empieza en los años 50, y abarca momentos clave para la instauración de
+            transformaciones radicales en el campo del arte rosarino.<br>
 
-
+            Luego de sus primeras incursiones en la plástica durante su adolescencia, inició un período de formación
+            en el taller de Juan Grela.
+            Luego de sus primeras incursiones en la plástica durante su adolescencia, inició un período de formación
+            en el taller de Juan Grela.
         </div>
     </div>
     <div class="section-info">
@@ -63,6 +76,13 @@ Template Name: Info
             iure deleniti dignissimos autem.
             Enim iusto atque recusandae nesciunt assumenda rerum adipisci numquam voluptas natus deserunt sequi quam
             ex
+            provident, itaque distinctio excepturi ea nihil voluptatum necessitatibus! Quasi magnam quaerat ipsam
+            itaque
+            aspernatur omnis?
+            Unde odit eligendi neque assumenda, amet, iste quibusdam sed sequi qui beatae, iure reprehenderit
+            blanditiis
+            velit corporis quae inventore earum doloribus. Facere fugiat eum nisi quisquam perferendis cum aperiam.
+            Rem.
             provident, itaque distinctio excepturi ea nihil voluptatum necessitatibus! Quasi magnam quaerat ipsam
             itaque
             aspernatur omnis?

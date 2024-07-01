@@ -36,6 +36,10 @@ html {
     margin-left: auto;
 }
 
+.invisible {
+    display: none;
+}
+
 .header-logo {
     width: 8em;
     transform: rotate(-8deg);
@@ -82,19 +86,7 @@ nav a {
 }
 
 .nav-list-open {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    gap: 3.5em;
-    background-color: rgb(247, 247, 247);
+    display: none;
 }
 
 .home-grid {
@@ -106,6 +98,7 @@ nav a {
     margin-right: auto;
     margin-left: auto;
     margin-top: 25px;
+    margin-bottom: 45px;
     padding-left: 80px;
     padding-right: 80px;
     column-gap: 65px;
@@ -121,7 +114,7 @@ nav a {
     width: 100%;
     height: auto;
     text-decoration: none;
-    gap: 2.5px;
+    gap: 0.5px;
 }
 
 
@@ -135,6 +128,11 @@ nav a {
     object-fit: cover;
     width: 100%;
     height: auto;
+}
+
+.images:hover {
+    filter: grayscale(70%);
+    transition: all ease-in-out 350ms;
 }
 
 .title-container {
@@ -211,6 +209,11 @@ nav a {
     height: 60vh;
 }
 
+.imagen-completa-container:hover {
+    filter: grayscale(70%);
+    transition: all ease-in-out 350ms;
+}
+
 .imagen-completa {
     object-fit: contain;
     width: auto;
@@ -265,21 +268,27 @@ nav a {
     
 }
 
+.recorte-img:hover {
+    filter: grayscale(70%);
+    transition: all ease-in-out 350ms;
+}
 
 .info-container {
     width: 65%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
+    margin-bottom: 3em;
+
 }
 
 
 
 .section-info {
     overflow: hidden;
-    /* Esto ayuda a que el contenedor contenga los elementos flotantes */
     width: 100%;
     text-align: justify;
+
 }
 
 .info-title {
@@ -290,22 +299,19 @@ nav a {
 
 .imagen-info-1 {
     float: left;
-    margin: 0px 1em 1em 0px;
-    /* Espacio entre la imagen y el texto */
+    margin: 0px 1em 0em 0px;
     max-width: 300px;
 }
 
 .imagen-info-2 {
     float: right;
     margin: 1em 0px 1em 1em;
-    /* Espacio entre la imagen y el texto */
     max-width: 300px;
 }
 
 .imagen-info-3 {
     float: right;
     margin: 1em 0px 1em 0px;
-    /* Espacio entre la imagen y el texto */
     width: 100%;
 }
 
@@ -370,6 +376,7 @@ nav a {
     margin-right: 80px;
     margin-left: 80px;
     margin-top: 40px;
+    margin-bottom: 40px;
     row-gap: 3em;
     column-gap: 2em;
     justify-content: space-between;
@@ -414,11 +421,10 @@ nav a {
     left: 0;
     z-index: 9999;
     background-color: rgb(74 75 71 / 90%);;
-    display: none; /* Ocultar inicialmente */
+    display: none;
     justify-content: center;
 }
 
-/* Estilos para los slides */
 .swiper-slide {
     width: 100%;
     height: 100%;
@@ -435,11 +441,10 @@ nav a {
 
 
 .swiper-image-container {
-    max-width: 80%; /* Ajusta el tamaño de las imágenes */
+    max-width: 80%;
     max-height: 80%;
 }
 
-/* Estilos para los botones de navegación del Swiper */
 .swiper-button-prev,
 .swiper-button-next {
     position: absolute;
@@ -457,7 +462,6 @@ nav a {
     z-index: 9999;
 }
 
-/* Posicionamiento de los botones de navegación */
 .swiper-button-prev {
     left: 10px;
 }
@@ -466,7 +470,6 @@ nav a {
     right: 10px;
 }
 
-/* Clase para mostrar el Swiper */
 .swiper-open {
     display: flex;
 }
@@ -564,6 +567,16 @@ nav a {
     .header {
         padding-left: 10px;
         padding-right: 10px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    .invisible {
+        display: block;
+    }
+
+    .item-right {
+        margin-left: auto; /* Esto empuja el segundo elemento a la derecha */
     }
 
     .detalles-title {
@@ -589,7 +602,22 @@ nav a {
         width: 80%;
     }
 
-    
+    .nav-list-open {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        gap: 3.5em;
+        background-color: rgb(247, 247, 247);
+        z-index: 1000;
+    }
 
 }
 
@@ -599,8 +627,8 @@ nav a {
 @media screen and (max-width: 800px) {
     .home-grid {
         grid-template-columns: repeat(1, minmax(100px, 1fr));
-        padding-left: 65px;
-        padding-right: 65px;
+        padding-left: 80px;
+        padding-right: 80px;
     }
 
     .item:nth-child(odd) {
@@ -722,6 +750,7 @@ nav a {
         display: flex;
         flex-flow: column;
         align-items: center;
+
     }
 
     .info-container {

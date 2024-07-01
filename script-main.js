@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
-
+/*
     if (botonBusqueda) {
 
         botonBusqueda.addEventListener("click", function () {
@@ -112,6 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
             
         });
     }
-    
+    */
     }
 );

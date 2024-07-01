@@ -1,11 +1,12 @@
 <header class="header">
 
+    <div class="invisible"></div>
+
     <a href="<?php echo esc_url(home_url('/')); ?>">
         <!-- Enlace al inicio -->
         <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo1.png" alt="Logo">
     </a>
-    </div>
-    <div>
+    <div class="menu">
 
         <nav class="nav">
             <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">inicio</a>
@@ -60,6 +61,10 @@
                 <line class="cls-1" x1="0.03" y1="9.9" x2="20" y2="9.9" />
             </svg>
         </button>
+
+    </div>
+    <div class="filter-section">
+        <?php get_template_part('template-filter'); ?>
     </div>
 
 

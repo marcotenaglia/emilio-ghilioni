@@ -20,13 +20,7 @@
     <?php
             get_header();
         ?>
-
-    <div class="buscador-container">
-        <label for="year">Buscar por año:</label>
-        <input type="number" name="year" id="year" />
-        <button id="botonBusqueda">Click me</button>
-    </div>
-
+  
     <div class="home-grid">
 
         <?php
