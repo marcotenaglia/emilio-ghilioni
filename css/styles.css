@@ -89,6 +89,10 @@ nav a {
     display: none;
 }
 
+.menu-off {
+    display: none;
+}
+
 .home-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));
@@ -494,6 +498,20 @@ nav a {
     margin-left: 80px;
     margin-top: 20px;
   }
+
+  .filter-section {
+    display: none;
+  }
+
+  .filter-section-on {
+    display: flex;
+  }
+
+  .lupa {
+    margin-left: 1.05em;
+    width: 1.05em;
+    height: 1.05em;
+}
 
 
 @media screen and (max-width: 1200px) {

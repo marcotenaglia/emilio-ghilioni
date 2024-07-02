@@ -1,4 +1,4 @@
-<form method="get" action="<?php echo esc_url(home_url('/')); ?>">
+<form  method="get" action="<?php echo esc_url(home_url('/')); ?>">
     <label for="medidas">Medidas:</label>
     <input type="text" name="medidas" id="medidas" value="<?php echo esc_attr(get_query_var('medidas')); ?>">
 

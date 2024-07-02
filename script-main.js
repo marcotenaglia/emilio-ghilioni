@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log("hola")
 
-    let menu = document.getElementById('hamburguerMenu')
-    let menuOpen = document.getElementById('menu-open')
-    let menuClose = document.getElementById('menu-close')
+    let menu = document.getElementById('menu')
+    let menuHambur = document.getElementById('hamburguerMenu')
+    let menuHamburOpen = document.getElementById('menuHamburOpen')
+    let menuHamburClose = document.getElementById('menuHamburClose')
     let navList = document.getElementById('nav-list')
-    let botonBusqueda = document.getElementById('botonBusqueda')
+    let lupa = document.getElementById('lupa')
+    let filter = document.getElementById('filter')
 
-
-    menu.addEventListener('click', function () {
-        menuOpen.classList.toggle('open');
-        menuClose.classList.toggle('open');
+    menuHambur.addEventListener('click', function () {
+        menuHamburOpen.classList.toggle('open');
+        menuHamburClose.classList.toggle('open');
         navList.classList.toggle('nav-list-open')
     });
 
@@ -88,6 +89,13 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    lupa.addEventListener("mouseover", () => {
+        menu.classList.add("menu-off")
+        filter.classList.add("filter-section-on")
+        console.log("si");
+    });
+
 /*
     if (botonBusqueda) {
 
