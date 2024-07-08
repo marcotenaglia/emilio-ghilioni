@@ -1,36 +1,101 @@
-<form  method="get" action="<?php echo esc_url(home_url('/')); ?>">
-    <label for="medidas">Medidas:</label>
-    <input type="text" name="medidas" id="medidas" value="<?php echo esc_attr(get_query_var('medidas')); ?>">
+<form class="form-filter" method="get" action="<?php echo esc_url(home_url('/')); ?>">
 
-    <label for="tecnica">Técnica:</label>
-    <select name="tecnica" id="tecnica">
-        <option value="">Seleccione</option>
-        <?php
-        $options = get_field_object('tecnica');
-        if ($options) {
-            foreach ($options['choices'] as $value => $label) {
-                echo '<option value="' . esc_attr($value) . '">' . esc_html($label) . '</option>';
+    <span>
+        <label for="titulo">Titulo:</label>
+        <select class="select-filter" name="titulo" id="titulo">
+
+            <option value="">-</option>
+
+            <?php
+             $args = array(
+                'post_type' => 'cuadros_post',
+                'posts_per_page' => -1
+            );
+            $posts = get_posts($args);
+
+            $todos_titulos = array();
+
+            foreach ($posts as $post) {
+                $titulos = get_field('cuadro_titulo', $post->ID); 
+                if ($titulos) {
+                    $todos_titulos[] = $titulos;
+                }
             }
-        }
-        ?>
-    </select>
 
-    <label for="fecha">Fecha:</label>
-    <select name="fecha" id="fecha">
-        <option value="">Seleccione</option>
-        <?php
-        // Obtener las opciones de fecha desde ACF
-        $options = get_field_object('fecha');
-        if ($options) {
-            foreach ($options['choices'] as $value => $label) {
-                echo '<option value="' . esc_attr($value) . '">' . esc_html($label) . '</option>';
+            $unicos_titulos = array_unique($todos_titulos);
+
+            foreach ($unicos_titulos as $titulos) {
+            echo '<option value="' . esc_attr($titulos) . '">' . esc_html($titulos) . '</option>';
             }
-        }
         ?>
-    </select>
+        </select>
 
-    <label for="titulo">Título:</label>
-    <input type="text" name="titulo" id="titulo" value="<?php echo esc_attr(get_query_var('titulo')); ?>">
+    </span>
 
-    <input type="submit" value="Filtrar">
+
+    <span>
+        <label for="tecnica">Técnica:</label>
+        <select class="select-filter" name="tecnica" id="tecnica">
+
+            <option value="">-</option>
+            <?php
+             $args = array(
+                'post_type' => 'cuadros_post',
+                'posts_per_page' => -1
+            );
+            $posts = get_posts($args);
+
+            $todas_tecnicas = array();
+
+            foreach ($posts as $post) {
+                $tecnicas = get_field('tecnica', $post->ID); 
+                if ($tecnicas) {
+                    $todas_tecnicas[] = $tecnicas;
+                }
+            }
+
+            $unicas_tecnicas = array_unique($todas_tecnicas);
+
+            foreach ($unicas_tecnicas as $tecnicas) {
+            echo '<option value="' . esc_attr($tecnicas) . '">' . esc_html($tecnicas) . '</option>';
+            }
+        ?>
+        </select>
+
+    </span>
+
+
+    <span>
+        <label for="fecha">Fecha:</label>
+        <select class="select-filter" name="fecha" id="fecha">
+
+            <option value="">-</option>
+            <?php
+             $args = array(
+                'post_type' => 'cuadros_post',
+                'posts_per_page' => -1
+            );
+            $posts = get_posts($args);
+            
+            $todas_fechas = array();
+            
+            foreach ($posts as $post) {
+                $fechas = get_field('fecha', $post->ID); 
+                if ($fechas) {
+                    $todas_fechas[] = $fechas;
+                }
+            }
+
+            $unicas_fechas = array_unique($todas_fechas);
+
+            foreach ($unicas_fechas as $fechas) {
+            echo '<option value="' . esc_attr($fechas) . '">' . esc_html($fechas) . '</option>';
+            }
+        ?>
+        </select>
+
+    </span>
+
+    <button type="submit" class="filter-submit" value="submit">Buscar</button>
+
 </form>

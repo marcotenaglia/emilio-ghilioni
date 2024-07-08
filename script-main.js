@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log("hola")
 
-    let menu = document.getElementById('menu')
+    let navToggle = document.getElementById('navToggle')
     let menuHambur = document.getElementById('hamburguerMenu')
     let menuHamburOpen = document.getElementById('menuHamburOpen')
     let menuHamburClose = document.getElementById('menuHamburClose')
@@ -90,36 +90,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    lupa.addEventListener("mouseover", () => {
-        menu.classList.add("menu-off")
-        filter.classList.add("filter-section-on")
+    lupa.addEventListener("click", () => {
+        navToggle.classList.toggle("menu-off")
+        filter.classList.toggle("filter-section-on")
         console.log("si");
     });
 
-/*
-    if (botonBusqueda) {
-
-        botonBusqueda.addEventListener("click", function () {
-            console.log("holaaaa");
-            // Obtener el valor del año ingresado por el usuario
-            const year = document.getElementById("year").value;
-            
-            // Obtener todos los cuadros
-            const cuadros = document.querySelectorAll(".home-grid .item");
-
-            // Mostrar u ocultar cuadros según el año seleccionado
-            cuadros.forEach(cuadro => {
-                const cuadroYear = cuadro.getAttribute("date");
-                if (cuadroYear === year || year === '') {
-                    cuadro.style.display = "flex";
-                } else {
-                    cuadro.style.display = "none";
-                }
-                
-            });
-            
-        });
-    }
-    */
-    }
+}
 );

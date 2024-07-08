@@ -507,11 +507,60 @@ nav a {
     display: flex;
   }
 
+  .filter-section {
+    width: 100%;
+    justify-content: right;
+    flex-flow: row;
+  }
+
+  .filter-container {
+    display: flex;
+    align-items: center;
+}
+
+  .form-filter > * {
+    margin-left: 0.1em;
+  }
+
+  .form-filter {
+    align-items: center;
+
+  }
+
+  .input-filter, .select-filter, .filter-submit {
+    border-radius: 1px;
+    border: solid black 1px;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
+  }
+
+  .input-filter {
+    width: 4em;
+  }
+
+  .form-filter {
+    margin: 0px;
+    justify-content: space-around;
+  }
+
   .lupa {
     margin-left: 1.05em;
     width: 1.05em;
     height: 1.05em;
-}
+  }
+
+    .filter-submit  {
+        background-color: rgba(244, 244, 244, 0.86);
+        border: none;
+        width: 5em;
+        border: solid black 1px;
+        padding: 1px;
+        margin-left: 1em;
+        display: inline-flex;
+        justify-content: center;
+    }
 
 
 @media screen and (max-width: 1200px) {
@@ -587,6 +636,11 @@ nav a {
         padding-right: 10px;
         justify-content: space-between;
         flex-direction: row-reverse;
+    }
+
+    .header-2 {
+        width: 300px;
+        background-color: red;
     }
 
     .invisible {
