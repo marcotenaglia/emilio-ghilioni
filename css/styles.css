@@ -68,7 +68,7 @@ nav a {
     transition: ease-in 0.5s;
     display: none;
     position: relative;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .hamburguer-line {
@@ -571,6 +571,7 @@ nav a {
     justify-self: center;
     align-items: center;
     margin-left: 1.05em;
+    z-index: 2000;
 }
 
 .lupa {
