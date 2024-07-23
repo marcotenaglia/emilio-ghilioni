@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>emilio ghilioni</title>
@@ -16,6 +15,16 @@
 </head>
 
 <body>
+
+<?php /*
+        // Obtener la página del encabezado por su título
+        $header_page = get_page_by_title('Encabezado');
+        if ($header_page) {
+            echo apply_filters('the_content', $header_page->post_content);
+        }
+*/
+
+        ?>
     <?php
             get_header();
         ?>
@@ -23,10 +32,11 @@
     <div class="home-grid">
 
         <?php
-/*        
+     
         $titulo = isset($_GET['titulo']) ? sanitize_text_field($_GET['titulo']) : '';
         $tecnica = isset($_GET['tecnica']) && $_GET['tecnica'] ? sanitize_text_field($_GET['tecnica']) : '';
         $fecha = isset($_GET['fecha']) && $_GET['fecha'] ? sanitize_text_field($_GET['fecha']) : '';
+        $medidas = isset($_GET['medidas']) && $_GET['medidas'] ? sanitize_text_field($_GET['medidas']) : '';
         
         $apply_filters = !empty($titulo) || !empty($tecnica) || !empty($fecha);
         
@@ -55,11 +65,15 @@
         }
 
         if (!empty($titulo)) {
+            $args['s'] = $titulo; // Utiliza el parámetro 's' para buscar en el título y contenido
+        }
+
+        
+        if (!empty($medidas) && $medidas !== '-') {
             $meta_query[] = array(
-                'key'     => 'cuadro_titulo',
-                'value'   => $titulo,
+                'key'     => 'medidas',
+                'value'   => $medidas,
                 'compare' => '=',
-                'type'    => 'CHAR', 
             );
         }
         
@@ -91,7 +105,7 @@
             echo 'No hay obras disponibles.';
             } 
         
-*/
+/*
 
 
 
@@ -134,7 +148,7 @@
 
 
 
-        ?>
+       */ ?>
     </div>
 
 

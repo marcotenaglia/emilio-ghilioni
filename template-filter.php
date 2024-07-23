@@ -1,43 +1,17 @@
-<form class="form-filter" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+<form class="form-filter" id="formFilter" method="get" action="<?php echo esc_url(home_url('/')); ?>">
 
     <span>
-        <label for="titulo">Titulo:</label>
-        <select class="select-filter" name="titulo" id="titulo">
-
-            <option value="">-</option>
-
-            <?php
-             $args = array(
-                'post_type' => 'cuadros_post',
-                'posts_per_page' => -1
-            );
-            $posts = get_posts($args);
-
-            $todos_titulos = array();
-
-            foreach ($posts as $post) {
-                $titulos = get_field('cuadro_titulo', $post->ID); 
-                if ($titulos) {
-                    $todos_titulos[] = $titulos;
-                }
-            }
-
-            $unicos_titulos = array_unique($todos_titulos);
-
-            foreach ($unicos_titulos as $titulos) {
-            echo '<option value="' . esc_attr($titulos) . '">' . esc_html($titulos) . '</option>';
-            }
-        ?>
-        </select>
-
+        <label for="titulo">título:</label>
+        <input type="text" class="input-filter" name="titulo" id="titulo"
+            value="<?php echo isset($_GET['titulo']) ? esc_attr($_GET['titulo']) : ''; ?>" />
     </span>
 
 
     <span>
-        <label for="tecnica">Técnica:</label>
+        <label for="tecnica">técnica:</label>
         <select class="select-filter" name="tecnica" id="tecnica">
 
-            <option value="">-</option>
+            <option value=""> </option>
             <?php
              $args = array(
                 'post_type' => 'cuadros_post',
@@ -54,6 +28,8 @@
                 }
             }
 
+            wp_reset_postdata();
+
             $unicas_tecnicas = array_unique($todas_tecnicas);
 
             foreach ($unicas_tecnicas as $tecnicas) {
@@ -66,10 +42,10 @@
 
 
     <span>
-        <label for="fecha">Fecha:</label>
+        <label for="fecha">año:</label>
         <select class="select-filter" name="fecha" id="fecha">
 
-            <option value="">-</option>
+            <option value=""> </option>
             <?php
              $args = array(
                 'post_type' => 'cuadros_post',
@@ -86,6 +62,8 @@
                 }
             }
 
+            wp_reset_postdata();
+
             $unicas_fechas = array_unique($todas_fechas);
 
             foreach ($unicas_fechas as $fechas) {
@@ -94,6 +72,38 @@
         ?>
         </select>
 
+    </span>
+
+    <span>
+        <label for="medidas">medidas:</label>
+        <select class="select-filter" name="medidas" id="medidas">
+
+            <option value=""> </option>
+            <?php
+         $args = array(
+            'post_type' => 'cuadros_post',
+            'posts_per_page' => -1
+        );
+        $posts = get_posts($args);
+
+        $todas_medidas = array();
+
+        foreach ($posts as $post) {
+            $medidas = get_field('medidas', $post->ID); 
+            if ($medidas) {
+                $todas_medidas[] = $medidas;
+            }
+        }
+
+        wp_reset_postdata();
+
+        $unicas_medidas = array_unique($todas_medidas);
+
+        foreach ($unicas_medidas as $medidas) {
+        echo '<option value="' . esc_attr($medidas) . '">' . esc_html($medidas) . '</option>';
+        }
+        ?>
+        </select>
     </span>
 
     <button type="submit" class="filter-submit" value="submit">Buscar</button>

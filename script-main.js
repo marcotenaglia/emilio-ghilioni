@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let menuHamburClose = document.getElementById('menuHamburClose')
     let navList = document.getElementById('nav-list')
     let lupa = document.getElementById('lupa')
+    let lupaSvg = document.getElementById('lupaSvg')
+    let xSvg = document.getElementById('xSvg')
     let filter = document.getElementById('filter')
+
 
     menuHambur.addEventListener('click', function () {
         menuHamburOpen.classList.toggle('open');
@@ -94,7 +97,11 @@ document.addEventListener('DOMContentLoaded', function () {
         navToggle.classList.toggle("menu-off")
         filter.classList.toggle("filter-section-on")
         console.log("si");
+        lupaSvg.classList.toggle("open")
+        xSvg.classList.toggle("x-open")
+        console.log("gola");
     });
+
 
 }
 );
