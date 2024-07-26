@@ -24,12 +24,21 @@ Template Name: Info
             ?>
 
 <div class="info-main">
-    <h2>Emilio Ghilioni ( 1935 - 2021 )</h2>
-    <h2>artista plástico;</h2>
-    <h2>de Rosario.</h2>
     <div class="info-container">
+        <div>
+            <div class="info-title-desk">
+                <h2>Emilio Ghilioni ( 1935 - 2021 )</h2>
+                <h2>artista plástico;</h2>
+                <h2>de Rosario.</h2>
+            </div>
+            <div class="info-title-mobile">
+                <h2>Emilio Ghilioni </h2>
+                <div>( 1935 - 2021 )</div>
+            </div>
+
+        </div>
         <div class="section-info">
-                <?php 
+            <?php 
             if( is_page('trayectoria') ) { // Reemplaza 'trayectoria' con el slug o ID de la página
                 $image_url = get_field('imagen_info_1'); // Reemplaza 'imagen_info_1' con el nombre del campo que definiste
     
@@ -42,7 +51,7 @@ Template Name: Info
                 echo 'Esta no es la página específica.';
             }
             ?>
-                <?php 
+            <?php 
             if( is_page('trayectoria') ) {
                 $image_url = get_field('imagen_info_2'); // Reemplaza 'imagen_info_2' con el nombre del campo que definiste
     
@@ -70,7 +79,7 @@ Template Name: Info
         </p>
 
         <div class="section-info">
-                <?php 
+            <?php 
             if( is_page('trayectoria') ) {
                 $image_url = get_field('imagen_info_3'); // Reemplaza 'imagen_info_3' con el nombre del campo que definiste
     
@@ -97,7 +106,6 @@ Template Name: Info
             ensayo y la institución del factor riesgo. Las modalidades de construcción de los lenguajes fluyen sobre un
             plano de vacilación entre diversos cánones tocando, en algunos casos, ciertos parámetros alusivos a la
             noción de pretéritos presentes.</p>
-        <div>
         <div class="section-info">
             <?php 
         if( is_page('trayectoria') ) {
@@ -113,16 +121,20 @@ Template Name: Info
         }
         ?>
         </div>
-        <p>Desde esta perspectiva, es posible señalar que el campo artístico argentino prescribe una compleja trama de
-            tradiciones del arte que definen instancias precisas de producción, donde han quedado inscriptos una serie
+        <p>Desde esta perspectiva, es posible señalar que el campo artístico argentino prescribe una compleja trama
+            de
+            tradiciones del arte que definen instancias precisas de producción, donde han quedado inscriptos una
+            serie
             de lineamientos estéticos determinantes para debatir el concepto de identidad. </p>
 
-        <p>La obra de Emilio Ghilioni de la etapa del retorno a la pintura en 1976, se desarrolla sobre la base de una
-            lectura que incluye cierta tradición artística local vinculada con dicha misión. En sus obras, es posible
+        <p>La obra de Emilio Ghilioni de la etapa del retorno a la pintura en 1976, se desarrolla sobre la base de
+            una
+            lectura que incluye cierta tradición artística local vinculada con dicha misión. En sus obras, es
+            posible
             retrotraernos a las huellas de artistas como Augusto Schiavoni, Luis Ouvrard y Juan Grela.</p>
 
         <div class="section-info">
-                <?php 
+            <?php 
             if( is_page('trayectoria') ) {
                 $image_url = get_field('imagen_info_5'); // Reemplaza 'imagen_info_5' con el nombre del campo que definiste
     
@@ -135,7 +147,7 @@ Template Name: Info
                 echo 'Esta no es la página específica.';
             }
             ?>
-                <?php 
+            <?php 
             if( is_page('trayectoria') ) {
                 $image_url = get_field('imagen_info_6'); // Reemplaza 'imagen_info_6' con el nombre del campo que definiste
     
@@ -149,11 +161,14 @@ Template Name: Info
             }
             ?>
         </div>
-        <p> Pero su trayectoria comienza en los años 50 y abarca momentos clave para la instauración de transformaciones
+        <p> Pero su trayectoria comienza en los años 50 y abarca momentos clave para la instauración de
+            transformaciones
             radicales en el campo del arte.</p>
-        <p>Por ende, en estas notas, se intenta poner en foco las principales fases del itinerario de creación de este
+        <p>Por ende, en estas notas, se intenta poner en foco las principales fases del itinerario de creación de
+            este
             artista, señalando algunas características de lo que podríamos considerar el rasgo sobresaliente de su
-            intención creadora: la vinculación intertextual con modelos específicos de la pintura histórica local.</p>
+            intención creadora: la vinculación intertextual con modelos específicos de la pintura histórica local.
+        </p>
 
         <div class="section-info">
             <div class="info-section-title-2">
@@ -164,7 +179,7 @@ Template Name: Info
                 </div>
             </div>
 
-                <?php 
+            <?php 
                 if( is_page('trayectoria') ) {
                     $image_url = get_field('imagen_info_7'); // Reemplaza 'imagen_info_7' con el nombre del campo que definiste
         
@@ -178,13 +193,16 @@ Template Name: Info
                 }
                 ?>
         </div>
+        <p>«La tarea de formación plástica en el taller del maestro Juan Grela (…) me permitió penetrar en el
+            concepto de lo universal en el arte, en particular en pintura».? </p>
+        <p>Luego de las primeras incursiones en la plástica durante su adolescencia, Ghilioni inició un período de
+            formación en el taller de Juan Grela. Momento donde el maestro comenzaba a desarrollar un tipo de
+            enseñanza ligado a un espectro analítico del lenguaje. Las clases estaban basadas en conocimientos
+            teóricos y prácticos sobre la pintura, que privilegiaban, principalmente, los elementos forma, línea,
+            valor, color y estructura en el marco de una concepción universal de la representación.</p>
 
-        <p>«La tarea de formación plástica en el taller del maestro Juan Grela (…) me permitió penetrar en el concepto de lo universal en el arte, en particular en pintura».? </p>
-        <p>Luego de las primeras incursiones en la plástica durante su adolescencia, Ghilioni inició un período de formación en el taller de Juan Grela. Momento donde el maestro comenzaba a desarrollar un tipo de enseñanza ligado a un espectro analítico del lenguaje. Las clases estaban basadas en conocimientos teóricos y prácticos sobre la pintura, que privilegiaban, principalmente, los elementos forma, línea, valor, color y estructura en el marco de una concepción universal de la representación.</p>
-            
-        </div>
         <div class="section-info">
-                <?php 
+            <?php 
             if( is_page('trayectoria') ) { // Reemplaza 'trayectoria' con el slug o ID de la página
                 $image_url = get_field('imagen_info_1'); // Reemplaza 'imagen_info_1' con el nombre del campo que definiste
     
@@ -197,7 +215,7 @@ Template Name: Info
                 echo 'Esta no es la página específica.';
             }
             ?>
-                <?php 
+            <?php 
             if( is_page('trayectoria') ) {
                 $image_url = get_field('imagen_info_2'); // Reemplaza 'imagen_info_2' con el nombre del campo que definiste
     
@@ -211,4 +229,11 @@ Template Name: Info
             }
             ?>
         </div>
-        <p>Los alumnos recibían una instrucción estricta pero sumamente reflexiva, circunscripta al estudio de ciertas producciones de artistas clave de la historia del arte local, nacional e internacional. En este sentido, para Ghilioni el taller de Grela fue un lugar donde desarrollar no sólo una lectura formal sobre la pintura como lenguaje, sino también una visión sobre la plástica rosarina, tanto histórica como vigente, donde salían a relucir nombres como Schiavoni, Manuel Musto, Ouvrard, Antonio Berni, Juan Berlengieri y los integrantes del Grupo Litoral, entre otros. Durante el cursado del taller, impulsado por Grela, Ghilioni realizó trabajos de investigación sobre algunos de estos artistas, ya sea individualmente o en grupo.</p>
+        <p>Los alumnos recibían una instrucción estricta pero sumamente reflexiva, circunscripta al estudio de ciertas
+            producciones de artistas clave de la historia del arte local, nacional e internacional. En este sentido,
+            para Ghilioni el taller de Grela fue un lugar donde desarrollar no sólo una lectura formal sobre la pintura
+            como lenguaje, sino también una visión sobre la plástica rosarina, tanto histórica como vigente, donde
+            salían a relucir nombres como Schiavoni, Manuel Musto, Ouvrard, Antonio Berni, Juan Berlengieri y los
+            integrantes del Grupo Litoral, entre otros. Durante el cursado del taller, impulsado por Grela, Ghilioni
+            realizó trabajos de investigación sobre algunos de estos artistas, ya sea individualmente o en grupo.</p>
+    </div>

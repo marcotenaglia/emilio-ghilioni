@@ -368,7 +368,9 @@ nav a {
     width: 350px;
 }
 
-
+.info-title-mobile {
+    display: none;
+}
 
 
 .contacto-container {
@@ -790,11 +792,17 @@ nav a {
         right: 0;
         bottom: 0;
         left: 0;
-        gap: 3.5em;
+        gap: 2em;
         background-color: rgb(247, 247, 247);
         z-index: 1000;
     }
 
+    .form-filter>* {
+        margin-left: 0em;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 
 }
 
@@ -896,7 +904,7 @@ nav a {
 
     .info-container {
         align-items: center;
-        width: 70%;
+        width: 80%;
         text-align: justify;
     }
 
@@ -932,11 +940,23 @@ nav a {
 
     .info-section-title-2 {
         justify-content: center;
+        width: 100%;
     }
 
     h2 {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 2em;
+    }
+
+    .info-title-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .info-title-desk {
+        display: none;
+        text-align: center;
     }
 }
 
@@ -997,5 +1017,9 @@ nav a {
         text-align: justify;
     }
 
+    h2 {
+        text-align: center;
+        font-size: 1.5em;
+    }
 
 }
