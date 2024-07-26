@@ -16,15 +16,7 @@
 
 <body>
 
-<?php /*
-        // Obtener la página del encabezado por su título
-        $header_page = get_page_by_title('Encabezado');
-        if ($header_page) {
-            echo apply_filters('the_content', $header_page->post_content);
-        }
-*/
 
-        ?>
     <?php
             get_header();
         ?>

@@ -4,6 +4,25 @@ body {
     font-style: normal;
 }
 
+b {
+    font-weight: 400;
+}
+
+p {
+    margin: 1em 0px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 300;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 2em;
+}
+
 button {
     border: none;
     background-color: inherit;
@@ -288,53 +307,68 @@ nav a {
     transition: all ease-in-out 350ms;
 }
 
-.info-container {
-    width: 65%;
+.info-main {
+    max-width: 670px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 3em;
-
 }
 
-
+.info-container {
+    display: flex;
+    flex-flow: column;
+}
 
 .section-info {
-    overflow: hidden;
-    width: 100%;
-    text-align: justify;
+    display: flex;
+    flex-flow: row;
+    gap: 2em;
+    margin: 2em 0px;
+    justify-content: space-between;
 
 }
 
-.info-title {
-    font-size: 2em;
-    font-weight: 400;
-    margin-bottom: 15px;
+.info-section-title {
+    display: flex;
+    align-items: end;
+}
+
+.info-section-title-2 {
+    display: flex;
+    align-items: end;
+    width: 350px;
 }
 
 .imagen-info-1 {
-    float: left;
-    margin: 0px 1em 0em 0px;
-    max-width: 300px;
+    width: 320px;
 }
 
 .imagen-info-2 {
-    float: right;
-    margin: 1em 0px 1em 1em;
-    max-width: 300px;
+    width: 320px;
 }
 
 .imagen-info-3 {
-    float: right;
-    margin: 1em 0px 1em 0px;
+    width: 350px;
+}
+
+.imagen-info-4 {
     width: 100%;
 }
 
-.imagen-info img {
-    display: block;
-    width: 100%;
-
+.imagen-info-5 {
+    width: 320px;
 }
+
+.imagen-info-6 {
+    width: 320px;
+}
+
+.imagen-info-7 {
+    width: 350px;
+}
+
+
 
 
 .contacto-container {
@@ -728,10 +762,6 @@ nav a {
         font-size: 2.4vw;
     }
 
-    .info-container {
-        width: 80%;
-    }
-
     .nav-list-open {
         display: flex;
         flex-flow: column;
@@ -857,11 +887,57 @@ nav a {
         margin-bottom: 20px;
     }
 
-    .info-container {
-        width: 90%;
+    .info-main {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
     }
 
+    .info-container {
+        align-items: center;
+        width: 70%;
+        text-align: justify;
+    }
 
+    .section-info {
+        flex-flow: column;
+        align-items: center;
+        gap: 1em;
+    }
+    
+    .imagen-info-1 {
+        width: 100%;
+    }
+
+    .imagen-info-2 {
+        display: none;
+    }
+
+    .imagen-info-3 {
+        width: 100%;
+    }
+
+    .imagen-info-5 {
+        width: 100%;
+    }
+
+    .imagen-info-6 {
+        display: none;
+    }
+
+    .imagen-info-7 {
+        width: 100%;
+    }
+
+    .info-section-title-2 {
+        justify-content: center;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.5em;
+    }
 }
 
 
@@ -893,24 +969,6 @@ nav a {
         font-size: 6vw;
     }
 
-    .section-info {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-
-    }
-
-    .info-container {
-        text-align: center;
-    }
-
-    .imagen-info-1 {
-        margin: 0px 0px 20px 0px;
-    }
-
-    .imagen-info-2 {
-        margin: 20px;
-    }
 
     .publicaciones-grid {
         row-gap: 3.5em;

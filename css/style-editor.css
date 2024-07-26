@@ -1,0 +1,18 @@
+html :where(.editor-styles-wrapper) {
+    padding: 0px;
+}
+
+.editor-styles-wrapper :where(:not(.is-layout-flex,.is-layout-grid))>.wp-block {
+     margin-left: 0px; 
+     margin-right: 0px;
+}
+
+html :where(.wp-block) {
+    margin-bottom: 28px;
+    margin-top: 28px;
+    max-width: none;
+}
+
+.texto-info {
+    font-size: 1.5em;
+}

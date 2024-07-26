@@ -100,3 +100,24 @@ function enqueue_swiper_assets() {
     wp_enqueue_script('scripts', get_template_directory_uri() . '/script-main.js', array(), '1.0', false);
 }
 add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
+
+function mytheme_setup() {
+    // Agrega soporte para estilos del editor
+    add_theme_support('editor-styles');
+
+    // Encola el archivo CSS del editor
+    add_editor_style('/css/style-editor.css');
+}
+add_action('after_setup_theme', 'mytheme_setup');
+
+function my_admin_styles() {
+    echo '
+    <style>
+    html :where(.wp-block) {
+        margin-bottom: 28px;
+        margin-top: 28px;
+        max-width: none !important;
+    }
+    </style>';
+}
+add_action('admin_head', 'my_admin_styles');
