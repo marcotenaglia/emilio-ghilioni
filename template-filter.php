@@ -1,108 +1,98 @@
 <form class="form-filter" id="formFilter" method="get" action="<?php echo esc_url(home_url('/')); ?>">
 
     <span>
-        <label for="titulo">título:</label>
         <input type="text" class="input-filter" name="titulo" id="titulo"
+            placeholder="título"
             value="<?php echo isset($_GET['titulo']) ? esc_attr($_GET['titulo']) : ''; ?>" />
     </span>
 
-
     <span>
-        <label for="tecnica">técnica:</label>
         <select class="select-filter" name="tecnica" id="tecnica">
-
-            <option value=""> </option>
+            <option value="" disabled selected hidden>técnica</option>
             <?php
-             $args = array(
-                'post_type' => 'cuadros_post',
-                'posts_per_page' => -1
-            );
-            $posts = get_posts($args);
+                $args = array(
+                    'post_type' => 'cuadros_post',
+                    'posts_per_page' => -1
+                );
+                $posts = get_posts($args);
 
-            $todas_tecnicas = array();
+                $todas_tecnicas = array();
 
-            foreach ($posts as $post) {
-                $tecnicas = get_field('tecnica', $post->ID); 
-                if ($tecnicas) {
-                    $todas_tecnicas[] = $tecnicas;
+                foreach ($posts as $post) {
+                    $tecnicas = get_field('tecnica', $post->ID); 
+                    if ($tecnicas) {
+                        $todas_tecnicas[] = $tecnicas;
+                    }
                 }
-            }
 
-            wp_reset_postdata();
+                wp_reset_postdata();
 
-            $unicas_tecnicas = array_unique($todas_tecnicas);
+                $unicas_tecnicas = array_unique($todas_tecnicas);
 
-            foreach ($unicas_tecnicas as $tecnicas) {
-            echo '<option value="' . esc_attr($tecnicas) . '">' . esc_html($tecnicas) . '</option>';
-            }
-        ?>
+                foreach ($unicas_tecnicas as $tecnicas) {
+                    echo '<option value="' . esc_attr($tecnicas) . '">' . esc_html($tecnicas) . '</option>';
+                }
+            ?>
         </select>
-
     </span>
 
-
     <span>
-        <label for="fecha">año:</label>
         <select class="select-filter" name="fecha" id="fecha">
-
-            <option value=""> </option>
+            <option value="" disabled selected hidden>año</option>
             <?php
-             $args = array(
-                'post_type' => 'cuadros_post',
-                'posts_per_page' => -1
-            );
-            $posts = get_posts($args);
-            
-            $todas_fechas = array();
-            
-            foreach ($posts as $post) {
-                $fechas = get_field('fecha', $post->ID); 
-                if ($fechas) {
-                    $todas_fechas[] = $fechas;
+                $args = array(
+                    'post_type' => 'cuadros_post',
+                    'posts_per_page' => -1
+                );
+                $posts = get_posts($args);
+                
+                $todas_fechas = array();
+                
+                foreach ($posts as $post) {
+                    $fechas = get_field('fecha', $post->ID); 
+                    if ($fechas) {
+                        $todas_fechas[] = $fechas;
+                    }
                 }
-            }
 
-            wp_reset_postdata();
+                wp_reset_postdata();
 
-            $unicas_fechas = array_unique($todas_fechas);
+                $unicas_fechas = array_unique($todas_fechas);
 
-            foreach ($unicas_fechas as $fechas) {
-            echo '<option value="' . esc_attr($fechas) . '">' . esc_html($fechas) . '</option>';
-            }
-        ?>
+                foreach ($unicas_fechas as $fechas) {
+                    echo '<option value="' . esc_attr($fechas) . '">' . esc_html($fechas) . '</option>';
+                }
+            ?>
         </select>
-
     </span>
 
     <span>
-        <label for="medidas">medidas:</label>
         <select class="select-filter" name="medidas" id="medidas">
-
-            <option value=""> </option>
+            <option value="" disabled selected hidden>medidas</option>
             <?php
-         $args = array(
-            'post_type' => 'cuadros_post',
-            'posts_per_page' => -1
-        );
-        $posts = get_posts($args);
+                $args = array(
+                    'post_type' => 'cuadros_post',
+                    'posts_per_page' => -1
+                );
+                $posts = get_posts($args);
 
-        $todas_medidas = array();
+                $todas_medidas = array();
 
-        foreach ($posts as $post) {
-            $medidas = get_field('medidas', $post->ID); 
-            if ($medidas) {
-                $todas_medidas[] = $medidas;
-            }
-        }
+                foreach ($posts as $post) {
+                    $medidas = get_field('medidas', $post->ID); 
+                    if ($medidas) {
+                        $todas_medidas[] = $medidas;
+                    }
+                }
 
-        wp_reset_postdata();
+                wp_reset_postdata();
 
-        $unicas_medidas = array_unique($todas_medidas);
+                $unicas_medidas = array_unique($todas_medidas);
 
-        foreach ($unicas_medidas as $medidas) {
-        echo '<option value="' . esc_attr($medidas) . '">' . esc_html($medidas) . '</option>';
-        }
-        ?>
+                foreach ($unicas_medidas as $medidas) {
+                    echo '<option value="' . esc_attr($medidas) . '">' . esc_html($medidas) . '</option>';
+                }
+            ?>
         </select>
     </span>
 

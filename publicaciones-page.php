@@ -26,7 +26,7 @@ Template Name: Publicaciones
             get_header();
         ?>
 
-<div class="publicaciones-grid">
+<div class="publicacion-container">
     <?php
             // Crear una consulta personalizada para obtener las publicaciones
             $args = array(
@@ -49,7 +49,7 @@ Template Name: Publicaciones
                         <img class="publicacion-images" src="<?php echo esc_url($imagen); ?>"
                             alt="<?php echo esc_attr($titulo); ?>">
                     </div>
-                    <div class="texto-publicacion">
+                    <div class="publicacion-text">
                             <div class="titulo-publicacion"><?php echo esc_html($titulo); ?></div>
                             <div class="descripcion-publicacion"><?php echo esc_html($descripcion); ?></div>
                     </div>

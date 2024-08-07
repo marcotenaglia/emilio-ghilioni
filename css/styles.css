@@ -9,7 +9,7 @@ b {
 }
 
 p {
-    margin: 1em 0px;
+    margin: .5em 0px;
 }
 
 h1 {
@@ -321,10 +321,14 @@ nav a {
 }
 
 .section-info {
+    margin-bottom: 1.5em;
+}
+
+.section-info-header {
     display: flex;
     flex-flow: row;
     gap: 2em;
-    margin: 2em 0px;
+    margin: 1.5em 0px;
     justify-content: space-between;
 
 }
@@ -420,47 +424,50 @@ nav a {
     margin-bottom: 10px;
 }
 
-.publicaciones-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 85%;
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    row-gap: 3em;
-    column-gap: 2em;
-    justify-content: space-between;
+.publicacion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 30px;
 }
 
 .publicacion {
     display: flex;
     flex-flow: row;
-    gap: 1.5em;
+    margin: 2rem 0px;
+    gap: 24px;
+    align-items: end;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .publicacion-images-container {
-    min-width: 250px;
+    max-width: 250px;
 }
 
 .publicacion-images {
+    object-fit: cover;
     width: 100%;
 }
 
-.texto-publicacion {
-    max-width: 350px;
-    width: 50%;
-    font-size: 1em;
-    text-align: start;
-    overflow-wrap: break-word;
+.publicacion-text {
+    max-width: 396px;
+    text-align: justify;
+}
+
+
+.publicacion:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: justify;
+    text-align-last: right;
+    -moz-text-align-last: right;
 }
 
 .titulo-publicacion {
-    font-size: 1.3em;
-}
-
-.descripcion-publicacion {
-    margin-top: 0.5em;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: 1.1em;
 }
 
 .swiper-container {
@@ -572,29 +579,25 @@ nav a {
 
 .form-filter {
     align-items: center;
-
 }
 
 .input-filter,
 .select-filter,
 .filter-submit {
-    border-radius: 1px;
-    border: solid black 1px;
+    border-radius: 10px;
+    border: solid rgb(68, 68, 68) 1px;
     font-family: inherit;
     font-weight: inherit;
     font-style: inherit;
     font-size: inherit;
     width: 6em;
+    margin-left: 1em;
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 
-#fecha {
-    width: 3em;
-}
-
-#medidas {
-    width: 4.5em;
-}
 
 .form-filter {
     margin: 0px;
@@ -629,13 +632,16 @@ nav a {
     background-color: rgba(244, 244, 244, 0.54);
     border: none;
     width: 4em;
-    border: solid black 1px;
-    padding: 1px;
-    margin-left: 1.05em;
+    border: solid rgb(106, 106, 106) 1px;
+    padding: 2px;
+    margin-left: 1em;
     display: inline-flex;
     justify-content: center;
 }
 
+.form-filter span {
+    margin: 0px;
+}
 
 
 
@@ -676,34 +682,13 @@ nav a {
     }
 
 
-    .publicaciones-grid {
-        grid-template-columns: repeat(1, 1fr);
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    .publicacion {
-        justify-content: center;
-    }
-
-    .form-filter {
-        font-size: 0.9em;
-        font-weight: 330;
-    }
-
-    .form-filter>* {
-        margin-left: 0.4em;
-    }
 
     .lupa-container {
         margin-left: 0.7em;
     }
 
-    .filter-submit {
-        margin-left: 0.7em;
 
-    }
 }
 
 
@@ -908,12 +893,13 @@ nav a {
         text-align: justify;
     }
 
-    .section-info {
+    .section-info,
+    .section-info-header {
         flex-flow: column;
         align-items: center;
         gap: 1em;
     }
-    
+
     .imagen-info-1 {
         width: 100%;
     }
@@ -958,6 +944,30 @@ nav a {
         display: none;
         text-align: center;
     }
+
+    .publicacion-container {
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .publicacion,
+    .publicacion:nth-child(even) {
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .publicacion-text {
+        text-align: center;
+        text-align: justify;
+        text-align-last: center;
+        -moz-text-align-last: center;
+    }
 }
 
 
@@ -989,33 +999,6 @@ nav a {
         font-size: 6vw;
     }
 
-
-    .publicaciones-grid {
-        row-gap: 3.5em;
-    }
-
-    .publicacion {
-        flex-flow: column;
-        align-items: center;
-        gap: 1em;
-    }
-
-    .publicacion-images-container {
-        width: 90%;
-    }
-
-    .texto-publicacion {
-        width: 90%;
-        max-width: none;
-    }
-
-    .titulo-publicacion {
-        text-align: center;
-    }
-
-    .descripcion-publicacion {
-        text-align: justify;
-    }
 
     h2 {
         text-align: center;
