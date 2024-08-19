@@ -48,13 +48,13 @@
         <?php /* menu  */ ?>
         <nav>
             <nav id="navToggle" class="nav">
-                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">inicio</a>
+                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
                 <a class="nav-anchortag"
-                    href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">trayectoria</a>
+                    href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">Trayectoria</a>
                 <a class="nav-anchortag"
-                    href="<?php echo esc_url( get_permalink( get_page_by_title( 'Publicaciones' ) ) ); ?>">publicaciones</a>
+                    href="<?php echo esc_url( get_permalink( get_page_by_title( 'Publicaciones' ) ) ); ?>">Publicaciones</a>
                 <a class="nav-anchortag"
-                    href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">contacto</a>
+                    href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a>
             </nav>
 
 
@@ -102,13 +102,13 @@
 
     
         <div class="nav-container nav-list-close" id="nav-list">
-            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">inicio</a>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Home' ) ) ); ?>">Inicio</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">trayectoria</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Trayectoria' ) ) ); ?>">Trayectoria</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Publicaciones' ) ) ); ?>">publicaciones</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Publicaciones' ) ) ); ?>">Publicaciones</a>
             <a class="nav-anchortag"
-                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">contacto</a>
+                href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contacto' ) ) ); ?>">Contacto</a>
         </div>
 
 

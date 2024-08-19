@@ -1,14 +1,14 @@
 <form class="form-filter" id="formFilter" method="get" action="<?php echo esc_url(home_url('/')); ?>">
 
     <span>
-        <input type="text" class="input-filter" name="titulo" id="titulo"
-            placeholder="título"
+        <input type="text" class="input-filter" name="Titulo" id="titulo"
+            placeholder="Título"
             value="<?php echo isset($_GET['titulo']) ? esc_attr($_GET['titulo']) : ''; ?>" />
     </span>
 
     <span>
         <select class="select-filter" name="tecnica" id="tecnica">
-            <option value="" disabled selected hidden>técnica</option>
+            <option value="" disabled selected hidden>Técnica</option>
             <?php
                 $args = array(
                     'post_type' => 'cuadros_post',
@@ -38,7 +38,7 @@
 
     <span>
         <select class="select-filter" name="fecha" id="fecha">
-            <option value="" disabled selected hidden>año</option>
+            <option value="" disabled selected hidden>Año</option>
             <?php
                 $args = array(
                     'post_type' => 'cuadros_post',
@@ -68,7 +68,7 @@
 
     <span>
         <select class="select-filter" name="medidas" id="medidas">
-            <option value="" disabled selected hidden>medidas</option>
+            <option value="" disabled selected hidden>Medidas</option>
             <?php
                 $args = array(
                     'post_type' => 'cuadros_post',
